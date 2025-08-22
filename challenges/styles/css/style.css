@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9fafc;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #4b6cb7, #182848);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.3em;
+    margin-bottom: 25px;
+    color: #e0e0e0;
+}
+
+/* BOTÃO MODERNO */
+.btn-fancy {
+    display: inline-block;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #4b6cb7, #182848);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-fancy::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-25deg);
+    transition: all 0.5s ease;
+}
+
+.btn-fancy:hover::after {
+    left: 125%;
+}
+
+.btn-fancy:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+/* SEÇÕES */
+.section {
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-welcome {
+    background-color: #ffffff;
+}
+
+.section-how {
+    background-color: #f1f4f9;
+}
+
+.section-tips {
+    background-color: #ffffff;
+}
+
+/* TÍTULOS DAS SEÇÕES */
+.section h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #182848;
+}
+
+/* LISTAS */
+.section ol, .section ul {
+    text-align: left;
+    display: inline-block;
+    margin-top: 15px;
+    color: #555;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+    header p {
+        font-size: 1em;
+    }
+    .btn-fancy {
+        padding: 12px 30px;
+    }
+    .section h2 {
+        font-size: 1.6em;
+    }
+    .section ol, .section ul {
+        font-size: 1em;
+    }
+}
